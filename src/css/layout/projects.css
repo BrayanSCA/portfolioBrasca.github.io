@@ -1,0 +1,38 @@
+.projects-section {
+  padding: 5rem 5%;
+  background-color: var(--bg-color);
+}
+
+.projects-section h2 {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.projects-section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--primary-color);
+  margin-top: 0.5rem;
+  border-radius: 2px;
+}
+
+.section-projects-description {
+  margin-bottom: 4rem; /*espacio antes que empiecen las tarjetas*/
+  max-width: 850px; /*limitar ancho para mejorar legibilidad*/
+}
+
+.section-projects-description p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.7; /*más espacio entre líneas para que no canse la vista*/
+  margin-bottom: 1.2rem; /*espacio entre el primer y el segundo párrafo*/
+}
+
+.section-projects-description p:last-child {
+  margin-bottom: 0; /*el último párrafo no necesita margen abajo*/
+}
+

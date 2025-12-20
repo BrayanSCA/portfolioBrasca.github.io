@@ -1,0 +1,45 @@
+.project-card {
+  background-color: var(--bg-color);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.project-card:hover {
+  transform: traslateY(-10px); /*se eleva al pasar el mouse*/
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-hover);
+}
+
+.card-icon {
+  width: 50px; /* controlar el contenedor*/
+  height: 50px;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-img {
+  width: 100%; /*la imagen se adapta al contenedor*/
+  height: auto;
+}
+
+.project-card h3 {
+  font-size: 1.25rem;
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  flex-grow: 1; /*empuja el botón hacia abajo para que todos estén alineados*/
+}
+

@@ -10,6 +10,16 @@
   font: inherit;
 }
 
+/* Recuperar el comportamiento de las etiquetas de énfasis */
+strong, b {
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+em, i {
+  font-style: italic;
+}
+
 /* Evitar que las imágenes se salgan de su contenedor */
 img, picture, video, canvas, svg {
   display: block;
