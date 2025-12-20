@@ -1,0 +1,62 @@
+.hero {
+  min-height: 80vh; /*ocupa casi toda la altura de la pantalla*/
+  display: flex;
+  align-items: center; /*centrar contenido verticalmente*/
+  justify-content: center;
+  padding: 2rem 5%;
+  background-color: var(--bg-soft); /*fondo sutilmente diferente del blanco*/
+}
+
+.hero-container {
+  max-width: 1200px;
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero-text h2 {
+  flex: 1; /*toma el espacio disponible*/
+  min-width: 300px;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  max-width: 600px; /*Evita que las líneas sean demasiado largas y difíciles de leer*/
+}
+
+.role {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  min-width: 300px;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px; /*bordes redondiados*/
+  box-shadow: va
+}
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+  .hero-text {
+    text-align: center;
+  }
+  .hero-container {
+    flex-direction: column-reverse; /*imagen arriba del texto*/
+    gap: 2rem;
+  }
+}

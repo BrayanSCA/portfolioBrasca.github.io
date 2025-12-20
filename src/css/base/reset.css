@@ -1,0 +1,42 @@
+/* usar un modelo de caja más intuitivo */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Eliminar márgenes y rellenos por defecto */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Evitar que las imágenes se salgan de su contenedor */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Configuración básica del cuerpo */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: var(--font-main);
+  overflow-x: hidden; /*evita el scroll horizontal accidental*/
+}
+
+/* Estilos rápidos para listas y enlaces */
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Scroll suave click enlaces del menú */
+html {
+  scroll-behavior: smooth;
+}

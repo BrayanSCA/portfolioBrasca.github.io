@@ -1,0 +1,44 @@
+header {
+  display: flex;
+  justify-content: space-between; /*separa el logo del título*/
+  align-items: center; /* centra todo verticalmente*/
+  padding: 1rem 5%; /*espaciado interno: arriba/abajo y a los lados*/
+  background-color: var (--bg-color);
+  box-shadow: var(--shadow-md); /*elevación moderna*/
+  position: sticky; /*fijo arriba al hacer scroll*/
+  top: 0;
+  z-index: 1000; /*asegura que siempre esté por encima de todo*/
+}
+
+/* Estilo logo y nombre */
+.logo{
+  display: flex;
+  align-items:center;
+  gap: 10px;
+}
+
+/* Estilo para el contenedor del nombre/logo */
+header h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+/* Estilo para la navegación */
+header nav ul {
+  display: flex;
+  gap: 1.5rem; /* Espacio entre cada link*/
+}
+
+/* Estilo para los enlaces del menú */
+header nav ul li a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: color 0.3s ease; /*suavizado al pasar el mouse*/
+}
+
+header nav ul li a:hover {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
