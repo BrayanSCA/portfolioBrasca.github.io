@@ -1,0 +1,25 @@
+:root {
+  /* Main colors*/
+  --primary-color: #2563eb;
+  --secondary-color: #0f172a; /*text and background*/
+  --accent-color: #06b6d4; /*striking details*/
+  
+  /* Background and surface colors */
+  --bg-color: #ffffff;
+  --bg-soft: #f8fafc; /*subtly highlight*/
+
+  /* Text colors */
+  --text-main: #1e293b;
+  --text-muted: #64748b; /*less important or very long texts*/
+
+  /* typography */
+  --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  /* Base spacing */
+  --space-unit: 1rem;
+  --border-radius: 8px;
+
+  /* Shadows for depth */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
