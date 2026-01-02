@@ -20,12 +20,12 @@
   border-radius: 2px;
 }
 
-.section-projects-description {
+.section-description {
   margin-bottom: 4rem; /*espacio antes que empiecen las tarjetas*/
   max-width: 850px; /*limitar ancho para mejorar legibilidad*/
 }
 
-.section-projects-description p {
+.section-description p {
   font-size: 1.1rem;
   color: var(--text-muted);
   line-height: 1.7; /*más espacio entre líneas para que no canse la vista*/

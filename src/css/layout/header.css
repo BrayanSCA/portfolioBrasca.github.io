@@ -3,7 +3,7 @@ header {
   justify-content: space-between; /*separa el logo del título*/
   align-items: center; /* centra todo verticalmente*/
   padding: 1rem 5%; /*espaciado interno: arriba/abajo y a los lados*/
-  background-color: var (--bg-color);
+  background-color: var(--bg-color);
   box-shadow: var(--shadow-md); /*elevación moderna*/
   position: sticky; /*fijo arriba al hacer scroll*/
   top: 0;
@@ -14,7 +14,14 @@ header {
 .logo{
   display: flex;
   align-items:center;
-  gap: 10px;
+  gap: 5px;
+  margin-right: 1.25rem;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
 /* Estilo para el contenedor del nombre/logo */
@@ -22,12 +29,13 @@ header h2 {
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--primary-color);
+  white-space: nowrap;
 }
 
 /* Estilo para la navegación */
 header nav ul {
   display: flex;
-  gap: 1.5rem; /* Espacio entre cada link*/
+  gap: 1rem; /* Espacio entre cada link*/
 }
 
 /* Estilo para los enlaces del menú */
