@@ -2,7 +2,7 @@ header {
   display: flex;
   justify-content: space-between; /*separa el logo del título*/
   align-items: center; /* centra todo verticalmente*/
-  padding: 1rem 5%; /*espaciado interno: arriba/abajo y a los lados*/
+  padding: 1rem 20px; /*espaciado interno: arriba/abajo y a los lados*/
   background-color: var(--bg-color);
   box-shadow: var(--shadow-md); /*elevación moderna*/
   position: sticky; /*fijo arriba al hacer scroll*/
@@ -22,6 +22,30 @@ header {
   width: 40px;
   height: 40px;
   object-fit: contain;
+}
+
+.nav-container {
+  position: absolute;
+}
+
+/* Botón Hamburguesa */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  gap: 5px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Barras para simular el icono del menú hamburguesa */
+.menu-toggle .bar{
+  width: 25px;
+  height: 3px;
+  background-color: var(--secondary-color);
+  transition: all 0.3s ease;
 }
 
 /* Estilo para el contenedor del nombre/logo */
@@ -49,4 +73,45 @@ header nav ul li a {
 header nav ul li a:hover {
   color: var(--primary-color);
   border-bottom: 2px solid var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    margin-left: auto;
+    padding: 0;
+    z-index: 1001; /*mantiene el botón en la última capa*/
+  }
+
+  .nav-list {
+    position: fixed;
+    top: 0;
+    right: -100%; /*preparar efecto de entrada derecha a izquierda*/
+    width: 70%;
+    height: 100vh;
+    background-color: var(--bg-color);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: 0.4s ease;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+  }
+
+  .nav-list.is-active {
+    right: 0;
+  }
+  /* Efecto X al dar click al menu-toggle */
+  /*efecto barra bar baje y gire a la derecha*/
+  .menu-toggle.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  /*oculta la barra del medio*/
+  .menu-toggle.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  /*efecto barra bar suba y gire a la izquierda*/
+  .menu-toggle.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 }
