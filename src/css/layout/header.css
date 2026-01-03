@@ -25,7 +25,8 @@ header {
 }
 
 .nav-container {
-  position: absolute;
+  position: static;
+  display: block;
 }
 
 /* Botón Hamburguesa */

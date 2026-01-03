@@ -1,0 +1,124 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  backdrop-filter: blur(5px); /* Efecto elegante de desenfoque */
+}
+
+.modal-content {
+  position: relative;
+  background-color: var(--secondary-color);
+  padding: 20px;
+  border-radius: 20px;
+  animation: modalEntrada 0.3s ease-out;
+}
+
+.close-modal {
+  position: absolute;
+  top: -45px;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.calculator {
+  background-color: var(--secondary-color);
+  width: 100%;
+  max-width: 320px;
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow-md);
+}
+
+.calc-display {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 1.5rem;
+  text-align: right;
+  border-radius: 10px;
+  margin-bottom:1.5rem;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#prev-operation {
+  font-size: 0.9rem;
+  color: #888;
+  height: 1.2rem;
+}
+
+#current-operation {
+  font-size: 2rem;
+  word-wrap: break-word;
+}
+
+.calc-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.btn-calc {
+  padding: 1.2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  transition: background 0.2s;
+}
+
+.btn-calc:hover {
+  background-color: #444;
+}
+
+.color-op {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.color-alt {
+  color: #ff5555;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.del {
+  grid-column: span 2; /*el botón DEL ocupa dos columnas*/
+}
+
+.color-equal {
+  background-color: var(--primary-color);
+  grid-column: span 2; /*el botón "=" ocupa dos columnas */
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.color-equal:hover {
+  background-color: var(--accent-color);
+}
+
+@keyframes modalEntrada {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -97,8 +97,48 @@
             </div>
             <h3>Calculadora Interactiva</h3>
             <p>Una herramienta funcional para realizar operaciones básicas con una interfaz limpia.</p>
-            <a href="#" class="btn-secondary">Ver proyecto</a>
+            <button onclick="openCalc()" class="btn-secondary">Ver proyecto</button>
           </article>
+
+          <div id="calc-modal" class="modal-overlay">
+            <div class="modal-content">
+              <button class="close-modal" onclick="closeCalc()">&times</button>
+
+              <div class="calculator">
+                <div class="calc-display">
+                  <div id="prev-operation"></div>
+                  <div id="current-operation">0</div>
+                </div>
+    
+                <div class="calc-buttons">
+                  <button class="btn-calc color-alt" onclick="clearDisplay()">C</button>
+                  <button class="btn-calc color-alt del" onclick="deleteNumber()">DEL</button>
+                  <button class="btn-calc color-op" onclick="appendOperator('/')">/</button>
+    
+                  <button class="btn-calc" onclick="appendNumber('7')">7</button>
+                  <button class="btn-calc" onclick="appendNumber('8')">8</button>
+                  <button class="btn-calc" onclick="appendNumber('9')">9</button>
+                  <button class="btn-calc color-op" onclick="appendOperator('*')">*</button>
+    
+                  <button class="btn-calc" onclick="appendNumber('4')">4</button>
+                  <button class="btn-calc" onclick="appendNumber('5')">5</button>
+                  <button class="btn-calc" onclick="appendNumber('6')">6</button>
+                  <button class="btn-calc color-op" onclick="appendOperator('-')">-</button>
+    
+                  <button class="btn-calc" onclick="appendNumber('1')">1</button>
+                  <button class="btn-calc" onclick="appendNumber('2')">2</button>
+                  <button class="btn-calc" onclick="appendNumber('3')">3</button>
+                  <button class="btn-calc color-op" onclick="appendOperator('+')">+</button>
+    
+                  <button class="btn-calc" onclick="appendNumber('0')">0</button>
+                  <button class="btn-calc" onclick="appendNumber('.')">.</button>
+                  <button class="btn-calc color-equal" onclick="calculate()">=</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
 
           <article class="project-card">
             <div class="card-icon">
@@ -241,6 +281,7 @@
   </footer>
   
   <script src="src/js/menu.js"></script>
+  <script src="src/js/calculator.js"></script>
 </body>
 
 </html>

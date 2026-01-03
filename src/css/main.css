@@ -11,4 +11,5 @@
 
 /* Components */
 @import "components/buttons.css";
-@import "components/card.css"
+@import "components/card.css";
+@import "components/calculator.css";
